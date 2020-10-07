@@ -51,9 +51,8 @@ namespace DataStructuresAndAlgorithms.DataStructures
             return false;
         }
 
-        public void print()
+        public void displayStack()
         {
-            Console.WriteLine(top);
             foreach(int e in stack)
             {
                 Console.Write(e + " ");

@@ -7,9 +7,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            Stack stack = new Stack(2);
-            stack.push(100);
-            Console.WriteLine(stack.pop());
+            
         }
     }
 }
