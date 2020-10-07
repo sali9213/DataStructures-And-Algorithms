@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructuresAndAlgorithms.DataStructures;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -6,7 +7,9 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Stack stack = new Stack(2);
+            stack.push(100);
+            Console.WriteLine(stack.pop());
         }
     }
 }
