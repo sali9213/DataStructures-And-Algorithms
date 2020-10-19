@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructuresAndAlgorithms.Algorithms;
 using DataStructuresAndAlgorithms.DataStructures;
 
 namespace DataStructuresAndAlgorithms
@@ -7,21 +8,26 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            DoubleStack stack = new DoubleStack(7);
-            stack.pushLeft(3);
-            stack.pushRight(4);
-            stack.pushLeft(2);
-            stack.pushLeft(1);
-            stack.pushLeft(5);
-            stack.pushLeft(7);
-            stack.pushLeft(10);
-            stack.popLeft();
-            stack.pushRight(14);
-            stack.popLeft();
-            stack.pushRight(16);
-            stack.popLeft();
-            stack.pushRight(11);
-            stack.Display();
+            BST bst = new BST();
+
+            int[] arr = { 1, 2, 3, 6, 78, 12, 4, 5, 88, 14, 11, 90, -30 };
+
+            foreach(int k in arr)
+            {
+                Node n = new Node(k);
+                BSTOperator.Insert(bst, n);
+            }
+
+            Node p = BSTOperator.Minimum(bst);
+
+            if (p == null)
+            {
+                Console.WriteLine("Node not found");
+            }
+            else
+            {
+                Console.WriteLine("THe node has been found: " + p.key);
+            }
         }
     }
 }
